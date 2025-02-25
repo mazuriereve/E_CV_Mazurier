@@ -17,23 +17,25 @@ header {
 /* Navbar */
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 50px; /* Augmente l'espace entre les liens */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    gap: 50px; /* Espace entre les liens */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Assurer que les éléments sont sur la même ligne */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px; /* Agrandir le texte */
+    font-size: 28px; /* Agrandir le texte */
     padding: 10px 20px;
 }
+
 
 /* Style des sections */
 .content-box {
@@ -182,4 +184,78 @@ footer {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+ul {
+    list-style-type: none; 
+    padding-left: 0;        
+}
+
+/* Page Projets */
+/* Section générale des projets */
+#projets {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.projet {
+    background-color: #0000005a; /* Couleur de fond des projets */
+    margin-bottom: 20px; /* Espacement entre les projets */
+    padding: 20px;
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce autour de chaque projet */
+}
+
+/* Informations dans chaque projet */
+.projet-info {
+    padding-top: 10px;
+}
+
+.projet-info p {
+    margin: 30px 0; /* Espacement entre les paragraphes */
+}
+
+/* Lien */
+.projet-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.projet-info a:hover {
+    text-decoration: underline;
+}
+
+/* Section générale des projets */
+#projets {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.projets-page {
+    display: block; /* Par défaut, toutes les pages sont visibles */
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+.pagination button:focus {
+    outline: none;
 }
