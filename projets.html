@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+
+    <header>
+        <h1 id="title">Mon e-CV</h1>
+        <button id="theme-toggle">🌙 Mode Sombre</button>
+        <div id="text-size-controls">
+            <button id="increase-text">🔍 +</button>
+            <button id="decrease-text">🔍 -</button>
+        </div>
+        <button id="language-toggle">🇬🇧 English</button> <!-- Bouton pour changer de langue -->
+
+
+        <nav>
+            <ul>
+              <li><a href="projets.html">Mes Projets</a></li>
+              <li><a href="formation.html">Formation</a></li>
+              <li><a href="contact.html">Me contacter</a></li>
+            </ul>
+          </nav>
+          
+    </header>
+    
+
+    <div id="fireflies"></div>
+
+    <body>
+        <section id="projets" class="content-box">
+            <h2>Mes projets</h2>
+            <p>Voici quelques projets sur lesquels j'ai travaillé durant toute ma scolarité.</p>
+            
+            <!-- Page 1 -->
+            <div id="page1" class="projets-page">
+                <!-- Projet 1 -->
+                <section class="projet">
+                    <h2>Jeu d'echec</h2>
+                    <div class="projet-info">
+                        <p><strong>Résumé :</strong> Pour ce projet il fallait créer un jeu d'échec intéractif jouable a deux joueurs , à l'aide d'une bibliothèque graphique (fournie par l'universitée) , codé en java. La difficultée résidait dans le déplacement unique de chaque différents pions , et d'également afficher à l'utilisateur les possibilitées de déplacement.</p>
+                        <p><strong>Technologies :</strong> Java + MG2D (bibliothèque graphique)</p>
+                        <p><strong>Outils :</strong> Visual Studio Code</p>
+                        <p><strong>Date :</strong> Mai 2024</p>
+                        <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/echec_java" target="_blank">Voir le projet</a></p>
+                    </div>
+                </section>
+        
+                <!-- Projet 2 -->
+                <section class="projet">
+                    <h2>Site web dynamique sur le thème choisi</h2>
+                    <div class="projet-info">
+                        <p><strong>Résumé :</strong> Création d'un site web intéractif sur le thème choisi (avec notre groupe nous avons choisi le jeu vidéo R6). Le but de ce projet était de présenter un site intéractif qui pouvait se mettre à jour automatiquement à l'aide de données que l'on rentraient manuellement ou avec des bases de données en tant réel , mais également d'assurer la sécuritée d'une base de données (chiffrage de mot de passe , attention aux erreurs d'injections).</p>
+                        <p><strong>Technologies :</strong> HTML, CSS, JavaScript, jQuery</p>
+                        <p><strong>Outils collaboratifs:</strong> Visual Studio Code / Trello / Figma / PHPMyAdmin </p>
+                        <p><strong>Date :</strong> Novembre 2023</p>
+                        <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/sae_r6" target="_blank">Voir le projet</a></p>
+                    </div>
+                </section>
+        
+                <!-- Projet 3 -->
+                <section class="projet">
+                    <h2> Site web dynamique  </h2>
+                    <div class="projet-info">
+                        <p><strong>Résumé :</strong> Création d'un site web dynamique , visant à tester nos professeurs et collègues sur leurs esprits logiques , à l'aide de plusieurs types d'énigmes que l'ont devait crée et ensuite intégrer. En intégrant plusieurs fonctionnalitées comme par exemple : pouvoir faire un utilisateur qui enregistre sa progression dans l'histoire , calculer un score d'un joueur en fonction de ses performances (utilisation d'indices ou non) , pouvoir faire des équipes ou en rejoindre. </p>
+                        <p><strong>Technologies :</strong> MySQL , HTML , CSS , Javasript , Python</p>
+                        <p><strong>Outils :</strong> Github , Gmail , trello , Figma , Canva </p>
+                        <p><strong>Date :</strong> Novembre 2024 - Janvier 2025</p>
+                        <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/darksayter/SAE_jeu_web" target="_blank">Voir le projet</a></p>
+                    </div>              
+                </section>
+            </div>
+        
+            <!-- Page 2 (initialement cachée) -->
+            <div id="page2" class="projets-page" style="display:none;">
+                <!-- Projet 4 -->
+                <section class="projet">
+                    <h2>Création d'un jeu vidéo + ajout de fonctionnalitées </h2 >
+                    <div class="projet-info">            
+                        <p><strong>Résumé :</strong>Pour ce projet nous avons repris les projets de collègues de promo afin de reprendre leur code et améliorer le jeu en ajoutant diverses fontionnalitées principales comme ajout d'une IA (avec différents niveaux de difficultées) , ajout de statistiques de partie , mise en réseau pour jouer à plusieurs. Mais également l'ajout de fonctionnalitées mineures dans le jeu.</p>
+                        <p><strong>Technologies :</strong> Python</p>
+                        <p><strong>Outils :</strong> Github / Git </p>
+                        <p><strong>Date :</strong> Mars 2023 - Mai 2023</p>
+                        <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/loop_quest" target="_blank">Voir le projet</a></p>
+                    </div>
+                </section>
+        
+                <!-- Projet 5 -->
+                <section class="projet">
+                    <h2>Jeu vidéo en VR</h2>
+                    <div class="projet-info">
+                        <p><strong>Résumé :</strong> </p>
+                        <p><strong>Outils :</strong> Unreal Engine </p>
+                        <p><strong>Date :</strong> Février 2025  2022</p>
+                        <p><strong> Aucun lien disponible pour visualiser ce projet </strong>  </p>
+                    </div>
+                </section>
+        
+                <!-- Projet 6 -->
+                <section class="projet">
+                    <h2>Stage de 2nd année </h2>
+                    <div class="projet-info">
+                        <p><strong>Résumé :</strong> Un site web que j'ai eu l'occasion de réaliser durant deux mois , le but était de faire un site de covoiturage local pour les petites communes cherchant à se déplacer avec des habitants afin de gagner un peu d'argent. Le site est très complet , les utilisateurs peuvent décider à l'avance de leur préférences (plutôt conducteur ou passager) , l'intégration d'une messagerie inter utilisateur , la possibilitée de réserver un trajet ou de l'annuler et plein d'autres fonctionnalitées.</p>
+                        <p><strong>Technologies :</strong> HTML , CSS , Javasript </p>
+                        <p><strong>Technologies :</strong> PhpMyAdmin / Github / Gmail / Figma </p>
+                        <p><strong>Date :</strong> Mai 2024 - Juin 2024</p>
+                        <p><strong>Lien vers le site :</strong> <a href="boucovoiturage.fr" target="_blank">Voir le site</a></p>
+                    </div>
+                </section>
+            </div>
+        
+            <!-- Navigation pour changer de page -->
+            <div class="pagination">
+                <button id="nextPage" onclick="showPage(2)">Suivant →</button>
+                <button id="prevPage" onclick="showPage(1)" style="display:none;">← Précédent</button>
+            </div>
+        </section>
+        
+        
+  
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>Retrouvez-moi sur <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        function showPage(pageNumber) {
+            // Cache toutes les pages
+            document.querySelectorAll('.projets-page').forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // Affiche la page demandée
+            document.getElementById('page' + pageNumber).style.display = 'block';
+
+            // Gère l'affichage des boutons "Précédent" et "Suivant"
+            if (pageNumber === 1) {
+                document.getElementById('prevPage').style.display = 'none';
+                document.getElementById('nextPage').style.display = 'inline-block';
+            } else if (pageNumber === 2) {
+                document.getElementById('prevPage').style.display = 'inline-block';
+                document.getElementById('nextPage').style.display = 'none';
+            }
+        }
+
+        // Initialiser sur la première page
+        showPage(1);
+
+    </script>
+
+</body>
+</html>
