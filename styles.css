@@ -1,6 +1,6 @@
 /* Style général */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
@@ -13,6 +13,27 @@ header {
     padding: 20px;
     text-align: center;
 }
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #4141413a, #1e3a8a);
+    padding: 20px;
+    text-align: center;
+}
+
+.bouton_footer{
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left : 1250px;
+}
+
+footer a {
+    color: white ;
+}
+
 
 /* Navbar */
 nav ul {
@@ -71,13 +92,6 @@ form button {
     cursor: pointer;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #0a0a0a;
-    margin-top: 50px;
-}
 
 /* Fond avec lucioles */
 #fireflies {
@@ -192,7 +206,6 @@ ul {
 }
 
 /* Page Projets */
-/* Section générale des projets */
 #projets {
     margin-top: 30px;
     padding: 20px;
@@ -235,6 +248,8 @@ ul {
     display: block; /* Par défaut, toutes les pages sont visibles */
 }
 
+
+
 /* Pagination */
 .pagination {
     text-align: center;
@@ -258,4 +273,69 @@ ul {
 
 .pagination button:focus {
     outline: none;
+}
+
+/* Side bar */ 
+#settings-icon {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 1000; /* Toujours visible */
+}
+
+#settings-icon:hover {
+    transform: rotate(30deg);
+}
+
+/* Barre latérale complètement cachée */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    
+    display: none; /* Cachée complètement */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+
+    z-index: 9999; /* Mettre un z-index très grand pour que l'élément apparaise en premier plan*/ 
+}
+
+/* Quand la barre est active */
+.sidebar-active {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* Bouton de fermeture */
+#close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Cache l’engrenage quand la barre est ouverte */
+.hidden {
+    display: none !important;
+}
+
+.square {
+    width: 250px;
+    height: 250px;
+    background-color: grey;
+    margin: 20px auto;
 }
