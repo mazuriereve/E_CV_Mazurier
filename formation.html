@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me Contacter</title>
+    <title>Mes Formations</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <script defer src="script.js"></script>
+    <style>/* Conteneur de la timeline */
+        .timeline-item {
+            display: flex;              /* Utilise Flexbox pour aligner les éléments horizontalement */
+            justify-content: space-between;
+            align-items: flex-start;    /* Aligne le contenu en haut */
+            margin: 40px 0;
+            flex-wrap: wrap;            /* Permet de passer à la ligne si les éléments ne tiennent pas sur la même ligne */
+        }
+        
+        /* Contenu texte de la timeline */
+        .timeline-content {
+            flex: 2;                    /* La section texte prend plus de place */
+            padding-right: 20px;         /* Ajoute un peu d'espace à droite pour séparer du texte de l'image */
+        }
+        
+        /* Image dans la timeline */
+        .image {
+            flex: 1;                    /* L'image occupe un espace plus petit à droite */
+            padding-left: 20px;
+            margin-top: 120px;
+        }
+        
+        .image img {
+            max-width: 100%;             /* L'image s'adapte à la largeur du conteneur */
+            height: auto;               /* La hauteur est ajustée pour conserver les proportions */
+        }
+        
+        /* Conteneur de la vidéo */
+        .video-wrapper {
+            margin-top: 20px;
+            text-align: center;         /* Centrer la vidéo */
+            width: 100%;                /* La vidéo prend toute la largeur du conteneur */
+        }
+        
+        .video-container {
+            height: auto;               /* Hauteur automatique en fonction du ratio */
+            max-width: 800px;           /* Limiter la largeur de la vidéo à 800px */
+            width: 100%;                /* La vidéo occupe toute la largeur du conteneur jusqu'à 800px */
+            margin: 20px auto;          /* Centrer la vidéo */
+        }
+        
+        .video-container iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;                /* S'assure que la vidéo occupe toute la largeur disponible */
+            height: 450px;              /* Hauteur définie pour garder un bon ratio */
+            border: none;               /* Supprime la bordure du cadre */
+        }
+        
+    </style>
 </head>
 <body>
 
@@ -44,6 +94,59 @@
         <button id="language-toggle">🇬🇧 English</button>
     </div>
     <div id="fireflies"></div>
+
+    <section id="timeline">
+        <h2>📜 Mon Parcours de Formation</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>BUT Informatique</h3>
+                    <h4>2022 - 2025</h4>
+                    <p>Obtention de mon BUT en informatique, en Parcours A avec une spécialisation en développement web et applications.</p>
+                    <p>
+                        Cette formation m'a permis d'acquérir des compétences techniques solides, notamment en HTML, CSS, JavaScript, ainsi qu'en back-end avec des technologies comme Node.js et React. J'ai également appris à utiliser des bases de données comme MySQL et MongoDB, et à travailler avec des outils de gestion de version tels que Git.
+                        Grâce à cette spécialisation, j'ai pu développer des compétences pratiques en créant des applications web, tout en améliorant mes capacités de travail en équipe et de gestion de projets avec des méthodologies comme Agile Scrum. Cette formation m’a préparé à relever les défis du développement web dans un environnement professionnel.
+                    </p>
+                    <p> <u> Retrouvez ci-dessous mon récapitulatif sur mes années dans cette formation. </u></p>
+                </div>
+                <div class="image">
+                    <img src="imgs/iut calais.jpg" alt="IUT Calais">
+                </div>
+                <div class="video-wrapper">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/6MPau7S9Vng" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Bac Général</h3>
+                    <h4>2019 - 2022</h4>
+                    <p>Baccalauréat Général avec spécialités : Numérique et Sciences de l'Informatique et Mathématiques.</p>
+                    <p>Cette formation m'a permis d'acquérir une bonne base en sciences de l'informatique, notamment en algorithmique, en développement informatique et en analyse de données. Elle m'a également donné des compétences solides en mathématiques, essentielles pour aborder des concepts complexes en informatique, comme la logique, les structures de données et les systèmes. Cette formation a été une étape cruciale dans mon parcours vers des études en informatique.</p>
+                </div>
+                <div class="image">
+                    <img src="imgs/sophie_berthelot.jpg" alt="Bac Général">
+                </div>
+            </div>
+            
+    
+            
+    
+        </div>
+    </section>
+    
+    
+    
 
 
     <footer>
