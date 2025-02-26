@@ -339,3 +339,73 @@ ul {
     background-color: grey;
     margin: 20px auto;
 }
+
+/* Effet de survol sur les sections */
+.content-box:hover {
+    transform: translateY(0); /* Annuler la translation si déjà appliquée */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Ombre verte légère */
+    border-color: #28a745; /* Changer la couleur du contour en vert */
+    transform: scale(1.05); /* Agrandir légèrement le container */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour l'agrandissement et la couleur du contour */
+}
+
+/* Effet au survol des liens de navigation */
+nav ul li a {
+    transition: transform 0.3s ease, color 0.3s ease; /* Animation fluide */
+}
+
+nav ul li a:hover {
+    transform: scale(1.1); /* Agrandissement léger */
+    color: #1e90ff; /* Bleu vif au survol */
+}
+
+/* page formation */
+/* Style général de la section */
+#timeline {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+/* Conteneur principal de la timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Chaque section */
+.timeline-item {
+    width: 80%;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #1e3a8a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Contenu */
+.timeline-content {
+    text-align: left;
+}
+
+/* Titre */
+.timeline-content h3 {
+    font-size: 24px;
+    color: #1e3a8a;
+}
+
+/* Date */
+.timeline-content h4 {
+    font-size: 18px;
+    color: #28a745;
+    margin: 5px 0;
+}
+
+/* Effet au survol */
+.timeline-item:hover {
+    transform: scale(1.03);
+    border-left: 5px solid #28a745;
+}
