@@ -5,31 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Projets</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <script defer src="script.js"></script>
 </head>
 <body>
-
-
     <header>
-        <h1 id="title">Mon e-CV</h1>
-        <button id="theme-toggle">🌙 Mode Sombre</button>
-        <div id="text-size-controls">
-            <button id="increase-text">🔍 +</button>
-            <button id="decrease-text">🔍 -</button>
+        <h1>EVE MAZURIER</h1>
+        <h2> Mon E_CV</h2>
+        <h2 class="title">| Développeuse Web |</h2>
+        
+        <div class="description">
+            Passionnée par la création d’interfaces intuitives et performantes, je développe des solutions web modernes et accessibles. 
         </div>
-        <button id="language-toggle">🇬🇧 English</button> <!-- Bouton pour changer de langue -->
 
-
+        <p> ----------------------------- </p>
+        
+        <div id="settings-icon">⚙️</div> <!-- Accès aux modifications options -->
+        
         <nav>
             <ul>
-              <li><a href="projets.html">Mes Projets</a></li>
-              <li><a href="formation.html">Formation</a></li>
-              <li><a href="contact.html">Me contacter</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html">Me contacter</a></li>
             </ul>
-          </nav>
-          
+        </nav>
     </header>
     
+    <!-- Barre latérale -->
+    <div id="sidebar">
+        <button id="close-sidebar">✖</button>
+        <h2>Options</h2>
+        <button id="theme-toggle">🌙 Mode Sombre</button><br>
+        <button id="increase-text">🔍 +</button>
+        <button id="decrease-text">🔍 -</button><br>
+        <button id="language-toggle">🇬🇧 English</button>
+    </div>
 
     <div id="fireflies"></div>
 
@@ -42,75 +54,77 @@
             <div id="page1" class="projets-page">
                 <!-- Projet 1 -->
                 <section class="projet">
-                    <h2>Jeu d'echec</h2>
+                    <h2>Jeu d'échecs</h2>
                     <div class="projet-info">
-                        <p><strong>Résumé :</strong> Pour ce projet il fallait créer un jeu d'échec intéractif jouable a deux joueurs , à l'aide d'une bibliothèque graphique (fournie par l'universitée) , codé en java. La difficultée résidait dans le déplacement unique de chaque différents pions , et d'également afficher à l'utilisateur les possibilitées de déplacement.</p>
-                        <p><strong>Technologies :</strong> Java + MG2D (bibliothèque graphique)</p>
-                        <p><strong>Outils :</strong> Visual Studio Code</p>
+                        <p><strong>Résumé :</strong> Ce projet consistait à développer un jeu d'échecs interactif jouable à deux joueurs, en utilisant une bibliothèque graphique fournie par l'université et programmé en Java. La principale difficulté résidait dans l'implémentation des déplacements spécifiques à chaque type de pièce, ainsi que dans l'affichage des mouvements possibles pour les joueurs. Nous avons également ajouté une fonctionnalité d'affichage des coups légaux et une gestion des règles comme le roque et la prise en passant.</p>
+                        <p><strong>Technologies :</strong> Java, MG2D (bibliothèque graphique fournie par l'universitée)</p>
+                        <p><strong>Outils :</strong> Visual Studio Code, GitHub</p>
                         <p><strong>Date :</strong> Mai 2024</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/echec_java" target="_blank">Voir le projet</a></p>
+                        <div class="square"> </div>
                     </div>
                 </section>
-        
+
                 <!-- Projet 2 -->
                 <section class="projet">
-                    <h2>Site web dynamique sur le thème choisi</h2>
+                    <h2>Site web dynamique sur un thème choisi</h2>
                     <div class="projet-info">
-                        <p><strong>Résumé :</strong> Création d'un site web intéractif sur le thème choisi (avec notre groupe nous avons choisi le jeu vidéo R6). Le but de ce projet était de présenter un site intéractif qui pouvait se mettre à jour automatiquement à l'aide de données que l'on rentraient manuellement ou avec des bases de données en tant réel , mais également d'assurer la sécuritée d'une base de données (chiffrage de mot de passe , attention aux erreurs d'injections).</p>
-                        <p><strong>Technologies :</strong> HTML, CSS, JavaScript, jQuery</p>
-                        <p><strong>Outils collaboratifs:</strong> Visual Studio Code / Trello / Figma / PHPMyAdmin </p>
+                        <p><strong>Résumé :</strong> Ce projet visait à créer un site web interactif sur un thème libre (notre groupe a choisi le jeu vidéo R6). L'objectif était de proposer un site dynamique pouvant être mis à jour automatiquement grâce à une base de données, tout en assurant la sécurité des informations stockées (ex: chiffrement des mots de passe, protection contre les injections SQL). Nous avons également intégré une API pour récupérer les statistiques des joueurs en temps réel et mis en place un système d'authentification sécurisé.</p>
+                        <p><strong>Technologies :</strong> HTML, CSS, JavaScript, jQuery, PHP, MySQL</p>
+                        <p><strong>Outils collaboratifs :</strong> Visual Studio Code, Trello, Figma, PHPMyAdmin</p>
                         <p><strong>Date :</strong> Novembre 2023</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/sae_r6" target="_blank">Voir le projet</a></p>
                     </div>
                 </section>
-        
+
                 <!-- Projet 3 -->
                 <section class="projet">
-                    <h2> Site web dynamique  </h2>
+                    <h2>Site web d'énigmes interactives</h2>
                     <div class="projet-info">
-                        <p><strong>Résumé :</strong> Création d'un site web dynamique , visant à tester nos professeurs et collègues sur leurs esprits logiques , à l'aide de plusieurs types d'énigmes que l'ont devait crée et ensuite intégrer. En intégrant plusieurs fonctionnalitées comme par exemple : pouvoir faire un utilisateur qui enregistre sa progression dans l'histoire , calculer un score d'un joueur en fonction de ses performances (utilisation d'indices ou non) , pouvoir faire des équipes ou en rejoindre. </p>
-                        <p><strong>Technologies :</strong> MySQL , HTML , CSS , Javasript , Python</p>
-                        <p><strong>Outils :</strong> Github , Gmail , trello , Figma , Canva </p>
+                        <p><strong>Résumé :</strong> Développement d'un site web dynamique visant à tester la logique des utilisateurs à travers différentes énigmes. Ce site intègre plusieurs fonctionnalités avancées : création de profils utilisateurs permettant d'enregistrer leur progression, calcul de scores basé sur l'utilisation d'indices, possibilité de créer ou rejoindre des équipes, et gestion d'un système de classement. Nous avons également mis en place un mode défi permettant aux utilisateurs de se challenger entre eux en temps réel.</p>
+                        <p><strong>Technologies :</strong> MySQL, HTML, CSS, JavaScript, Python</p>
+                        <p><strong>Outils :</strong> GitHub, Trello, Figma, Canva</p>
                         <p><strong>Date :</strong> Novembre 2024 - Janvier 2025</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/darksayter/SAE_jeu_web" target="_blank">Voir le projet</a></p>
-                    </div>              
+                    </div>
                 </section>
             </div>
-        
+
             <!-- Page 2 (initialement cachée) -->
             <div id="page2" class="projets-page" style="display:none;">
                 <!-- Projet 4 -->
                 <section class="projet">
-                    <h2>Création d'un jeu vidéo + ajout de fonctionnalitées </h2 >
-                    <div class="projet-info">            
-                        <p><strong>Résumé :</strong>Pour ce projet nous avons repris les projets de collègues de promo afin de reprendre leur code et améliorer le jeu en ajoutant diverses fontionnalitées principales comme ajout d'une IA (avec différents niveaux de difficultées) , ajout de statistiques de partie , mise en réseau pour jouer à plusieurs. Mais également l'ajout de fonctionnalitées mineures dans le jeu.</p>
+                    <h2>Amélioration d'un jeu vidéo existant</h2>
+                    <div class="projet-info">
+                        <p><strong>Résumé :</strong> Ce projet consistait à reprendre les jeux développés par d'autres étudiants afin d'améliorer leur gameplay. Nous avons ajouté plusieurs fonctionnalités majeures : intelligence artificielle avec différents niveaux de difficulté, statistiques de partie, mode multijoueur en réseau, ainsi que diverses améliorations mineures du jeu. Nous avons également optimisé les performances du jeu et corrigé plusieurs bugs liés à la physique des collisions.</p>
                         <p><strong>Technologies :</strong> Python</p>
-                        <p><strong>Outils :</strong> Github / Git </p>
+                        <p><strong>Outils :</strong> GitHub, Git</p>
                         <p><strong>Date :</strong> Mars 2023 - Mai 2023</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/loop_quest" target="_blank">Voir le projet</a></p>
                     </div>
                 </section>
-        
+
                 <!-- Projet 5 -->
                 <section class="projet">
-                    <h2>Jeu vidéo en VR</h2>
+                    <h2>Jeu vidéo en réalité virtuelle</h2>
                     <div class="projet-info">
-                        <p><strong>Résumé :</strong> </p>
-                        <p><strong>Outils :</strong> Unreal Engine </p>
-                        <p><strong>Date :</strong> Février 2025  2022</p>
-                        <p><strong> Aucun lien disponible pour visualiser ce projet </strong>  </p>
+                        <p><strong>Résumé :</strong> Création d'un jeu en réalité virtuelle utilisant Unreal Engine. L'objectif était d'explorer les capacités de l'interaction VR et d'optimiser l'expérience utilisateur à travers des contrôles immersifs. Nous avons développé un prototype intégrant des interactions réalistes avec l'environnement, ainsi qu'un système de mouvement naturel utilisant les contrôleurs VR.</p>
+                        <p><strong>Technologies :</strong> Unreal Engine</p>
+                        <p><strong>Outils :</strong> Visual Studio, Blender (pour la modélisation)</p>
+                        <p><strong>Date :</strong> Février 2022</p>
+                        <p><strong>Aucun lien disponible pour visualiser ce projet.</strong></p>
                     </div>
                 </section>
-        
+
                 <!-- Projet 6 -->
                 <section class="projet">
-                    <h2>Stage de 2nd année </h2>
+                    <h2>Stage de 2e année : Site de covoiturage local</h2>
                     <div class="projet-info">
-                        <p><strong>Résumé :</strong> Un site web que j'ai eu l'occasion de réaliser durant deux mois , le but était de faire un site de covoiturage local pour les petites communes cherchant à se déplacer avec des habitants afin de gagner un peu d'argent. Le site est très complet , les utilisateurs peuvent décider à l'avance de leur préférences (plutôt conducteur ou passager) , l'intégration d'une messagerie inter utilisateur , la possibilitée de réserver un trajet ou de l'annuler et plein d'autres fonctionnalitées.</p>
-                        <p><strong>Technologies :</strong> HTML , CSS , Javasript </p>
-                        <p><strong>Technologies :</strong> PhpMyAdmin / Github / Gmail / Figma </p>
+                        <p><strong>Résumé :</strong> Durant mon stage de 2 mois, j'ai développé un site web facilitant le covoiturage pour les habitants des petites communes. Ce site permet aux utilisateurs de choisir leur rôle (conducteur ou passager), d'envoyer et recevoir des messages, de réserver ou annuler des trajets, et d'accéder à de nombreuses autres fonctionnalités. Une carte interactive a également été intégrée pour faciliter la visualisation des trajets en cours.</p>
+                        <p><strong>Technologies :</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                        <p><strong>Outils :</strong> GitHub, Gmail, Figma, Trello</p>
                         <p><strong>Date :</strong> Mai 2024 - Juin 2024</p>
-                        <p><strong>Lien vers le site :</strong> <a href="boucovoiturage.fr" target="_blank">Voir le site</a></p>
+                        <p><strong>Lien vers le site :</strong> <a href="https://boucovoiturage.fr" target="_blank">Voir le site</a></p>
                     </div>
                 </section>
             </div>
@@ -138,8 +152,17 @@
 
 
     <footer>
-        <p>Retrouvez-moi sur <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>
+        
+        <p>Retrouvez-moi sur :</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/mazuriereve/" target="_blank">GitHub</a></li>
+        </ul>        
+        <p>&copy; 2025 Eve Mazurier - Tous droits réservés</p>
+        <button class="bouton_footer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Retour en haut</button>
     </footer>
+
 
     <script>
         function showPage(pageNumber) {
