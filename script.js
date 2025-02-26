@@ -140,3 +140,36 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealSection);
     revealSection();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const settingsIcon = document.getElementById("settings-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("close-sidebar");
+
+    // Afficher la barre latérale et cacher l'engrenage
+    settingsIcon.addEventListener("click", function () {
+        sidebar.style.display = "block"; // Afficher la barre
+        setTimeout(() => {
+            sidebar.classList.add("sidebar-active"); // Activer l'opacité en douceur
+        }, 10);
+        settingsIcon.classList.add("hidden"); // Cacher l’engrenage
+    });
+
+    // Fonction pour fermer la barre latérale proprement
+    function closeSidebarMenu() {
+        sidebar.classList.remove("sidebar-active"); // Retirer l’opacité
+        setTimeout(() => {
+            sidebar.style.display = "none"; // Cacher après l’animation
+        }, 400);
+        settingsIcon.classList.remove("hidden"); // Réafficher l’engrenage
+    }
+
+    closeSidebar.addEventListener("click", closeSidebarMenu);
+
+    // Fermer la barre si on clique en dehors
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && !settingsIcon.contains(event.target)) {
+            closeSidebarMenu();
+        }
+    });
+});
