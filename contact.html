@@ -3,90 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me Contacter</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <h1>EVE MAZURIER</h1>
-        <h2> Mon E_CV</h2>
-        <h2 class="title">| Développeuse Web |</h2>
-        
-        <div class="description">
-            Passionnée par la création d’interfaces intuitives et performantes, je développe des solutions web modernes et accessibles. 
-        </div>
-
-        <p> ----------------------------- </p>
-        
-        <div id="settings-icon">⚙️</div> <!-- Accès aux modifications options -->
-    
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Mes Projets</a></li>
-                <li><a href="formation.html">Formation</a></li>
-                <li><a href="contact.html">Me contacter</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Barre latérale -->
-    <div id="sidebar">
-        <button id="close-sidebar">✖</button>
-        <h2>Options</h2>
-        <button id="theme-toggle">🌙 Mode Sombre</button><br>
-        <button id="increase-text">🔍 +</button>
-        <button id="decrease-text">🔍 -</button><br>
-        <button id="language-toggle">🇬🇧 English</button>
-    </div>
-    
-    
-
-    <div id="fireflies"></div>
-
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
     <div class="contact-form-container">
         <h1>Contactez-nous</h1>
-        <form action="send_mail.php" method="post" class="contact-form">
-            <label for="name">Nom:</label>
-            <input type="text" id="name" name="name" required>
+        <form action="https://formspree.io/f/xjkgnbav" method="POST" class="contact-form">
+            <label for="email">
+                Votre e-mail :
+                <input type="email" name="email" required>
+            </label>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">
+                Votre message :
+                <textarea name="message" rows="4" required></textarea>
+            </label>
 
             <button type="submit">Envoyer</button>
         </form>
     </div>
-
-    
-
-    <footer>
-        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>
-        
-        <p>Retrouvez-moi sur :</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/mazuriereve/" target="_blank">GitHub</a></li>
-        </ul>        
-        <p>&copy; 2025 Eve Mazurier - Tous droits réservés</p>
-        <button class="bouton_footer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Retour en haut</button>
-    </footer>
-
-
 </body>
 </html>
