@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
     <script defer src="script.js"></script>
     <script>
         document.getElementById("close-sidebar").addEventListener("click", function() {
@@ -20,7 +18,7 @@
                 document.getElementById("sidebar").classList.add("open");
             }, 500); // Ouvre la sidebar après 0.5s
         });
-        </script>
+    </script>
 </head>
 <body>
     <header>
@@ -139,7 +137,35 @@
             background-color: #45a049;
         }
 
-       
+        .social-section {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .social-section p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-links a {
+            font-size: 24px;
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #283aff;
+        }
     </style>
 </head>
 <body>
@@ -161,7 +187,19 @@
         </form>
     </div>
 
-    
+    <!-- Ajout des liens vers LinkedIn et GitHub sous le formulaire -->
+    <div class="content-box">
+
+        <div class="social-links">
+            <p>Vous pouvez également me retrouver sur :</p>
+            <a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/mazuriereve/" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
 
     <footer>
         <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>      
@@ -177,14 +215,14 @@
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
             </li>
-        </ul>        
+        </ul>
         <p>&copy; 2025 Eve Mazurier - Tous droits réservés</p>
         <button class="bouton_footer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Retour en haut</button>
     </footer>
-
 
 </body>
 </html>
 
 
 
+        
