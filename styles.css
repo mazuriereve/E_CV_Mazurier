@@ -14,6 +14,7 @@ header {
     text-align: center;
 }
 
+
 /* Footer */
 footer {
     background: linear-gradient(90deg, #4141413a, #1e3a8a);
@@ -57,8 +58,12 @@ nav ul li a {
     padding: 10px 20px;
 }
 
+/* Cache l’engrenage quand la barre est ouverte */
+.hidden {
+    display: none !important;
+}
 
-/* Style des sections */
+/* Style des sections hormis pour "projets */
 .content-box {
     width: 80%;
     margin: 50px auto;
@@ -76,6 +81,16 @@ nav ul li a {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Effet de survol sur les sections */
+.content-box:hover {
+    transform: translateY(0); 
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    border-color: #28a745; 
+    transform: scale(1.05); 
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
 
 /* Formulaire */
 form input, form textarea, form button {
@@ -249,7 +264,6 @@ ul {
 }
 
 
-
 /* Pagination */
 .pagination {
     text-align: center;
@@ -302,7 +316,6 @@ ul {
     padding: 20px;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
-    
     display: none; /* Cachée complètement */
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
@@ -328,11 +341,7 @@ ul {
     cursor: pointer;
 }
 
-/* Cache l’engrenage quand la barre est ouverte */
-.hidden {
-    display: none !important;
-}
-
+/* Carré sur la page pour savoir ou mettre les images*/ 
 .square {
     width: 250px;
     height: 250px;
@@ -340,14 +349,6 @@ ul {
     margin: 20px auto;
 }
 
-/* Effet de survol sur les sections */
-.content-box:hover {
-    transform: translateY(0); /* Annuler la translation si déjà appliquée */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Ombre verte légère */
-    border-color: #28a745; /* Changer la couleur du contour en vert */
-    transform: scale(1.05); /* Agrandir légèrement le container */
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour l'agrandissement et la couleur du contour */
-}
 
 /* Effet au survol des liens de navigation */
 nav ul li a {
