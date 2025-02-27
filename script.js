@@ -91,43 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Gestion de la langue
-    const translations = {
-        "fr": {
-            "title": "Mon e-CV",
-            "languageToggle": "🇬🇧 English",
-            "projets": "Projets",
-            "formation": "Formation",
-            "contact": "Me contacter",
-        },
-        "en": {
-            "title": "My e-CV",
-            "languageToggle": "🇫🇷 Français",
-            "projets": "Projects",
-            "formation": "Education",
-            "contact": "Contact Me",
-        }
-    };
-
-    let currentLanguage = localStorage.getItem("language") || "fr";
-
-    const updateLanguage = (lang) => {
-        document.getElementById("title").textContent = translations[lang].title;
-        languageToggle.textContent = translations[lang].languageToggle;
-
-        document.querySelectorAll(".translatable").forEach(element => {
-            element.textContent = translations[lang][element.getAttribute("href").substring(1)];
-        });
-
-        localStorage.setItem("language", lang);
-    };
-
-    updateLanguage(currentLanguage);
-
-    languageToggle.addEventListener("click", () => {
-        currentLanguage = currentLanguage === "fr" ? "en" : "fr";
-        updateLanguage(currentLanguage);
-    });
 
     // Effet d’apparition des sections
     const revealSection = () => {

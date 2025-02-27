@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* Header */
@@ -14,12 +14,82 @@ header {
     text-align: center;
 }
 
+/* Message d'alerte*/
+#scrolling-banner {
+    position: fixed;          /* Fixe le bandeau en haut */
+    top: 0;                   /* Place le bandeau en haut de la page */
+    left: 0;                  /* Place le bandeau à gauche */
+    width: 100%;              /* Largeur totale */
+    background-color: #ff1818; /* Couleur de fond du bandeau (jaune) */
+    color: black;             /* Couleur du texte */
+    text-align: center;       /* Centrer le texte horizontalement */
+    padding: 10px 0;          /* Ajout d'un peu d'espace autour du texte */
+    z-index: 9999;            /* Assure que le bandeau est au-dessus des autres éléments */
+    white-space: nowrap;      /* Evite que le texte se casse sur plusieurs lignes */
+    overflow: hidden;         /* Evite les débordements de texte */
+}
+
+/* Animation pour faire défiler le texte */
+#scrolling-banner p {
+    display: inline-block;    /* Garder le texte sur une seule ligne */
+    animation: scroll-left 15s linear infinite;  /* Animation qui défile vers la gauche */
+}
+
+/* Définir l'animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Commence à droite */
+    }
+    100% {
+        transform: translateX(-100%); /* Finie complètement à gauche */
+    }
+}
+
+/* Style pour l'entête */
+.header {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Nom */
+.name {
+    font-size: 3rem;  /* Plus grand */
+    font-weight: bold;
+    color: #ffffff; /* Couleur sombre */
+    margin-bottom: 10px;
+}
+
+/* Sous-titre (Mon E_CV) */
+.subtitle {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Titre de la fonction (Développeuse Web) */
+.title {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #3498db; /* Couleur bleue */
+    margin-bottom: 20px;
+}
+
+/* Description */
+.description {
+    font-size: 1.1rem;
+    color: #34495e;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
 
 /* Footer */
 footer {
     background: linear-gradient(90deg, #4141413a, #1e3a8a);
     padding: 20px;
     text-align: center;
+    font-size : 24px;
 }
 
 .bouton_footer{
@@ -31,9 +101,7 @@ footer {
     margin-left : 1250px;
 }
 
-footer a {
-    color: white ;
-}
+footer a {color: white ;}
 
 
 /* Navbar */
@@ -59,9 +127,7 @@ nav ul li a {
 }
 
 /* Cache l’engrenage quand la barre est ouverte */
-.hidden {
-    display: none !important;
-}
+.hidden {display: none !important;}
 
 /* Style des sections hormis pour "projets */
 .content-box {
@@ -85,8 +151,8 @@ nav ul li a {
 /* Effet de survol sur les sections */
 .content-box:hover {
     transform: translateY(0); 
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-    border-color: #28a745; 
+    box-shadow: 0 0 15px rgba(43, 0, 255, 0.6);
+    border-color: #1824ff; 
     transform: scale(1.05); 
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -161,32 +227,6 @@ form button {
     margin-top: 10px;
 }
 
-/* Mode Clair */
-.light-mode {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-.light-mode header {
-    background: linear-gradient(90deg, #ffffff, #cce0ff);
-}
-
-.light-mode .content-box {
-    background-color: #ffffff;
-    border: 2px solid #1e3a8a;
-    color: #333;
-}
-
-.light-mode footer {
-    background: #ccc;
-    color: #333;
-}
-
-.light-mode #theme-toggle {
-    background-color: #1e3a8a;
-    color: white;
-}
-
 
 /* Style des boutons d'accessibilité */
 #text-size-controls {
@@ -227,42 +267,23 @@ ul {
 }
 
 .projet {
-    background-color: #0000005a; /* Couleur de fond des projets */
-    margin-bottom: 20px; /* Espacement entre les projets */
+    background-color: #0000005a; 
+    margin-bottom: 20px;    
     padding: 20px;
-    border-radius: 8px; /* Bords arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce autour de chaque projet */
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+.projets-page {display: block;}  
 
 /* Informations dans chaque projet */
-.projet-info {
-    padding-top: 10px;
-}
-
-.projet-info p {
-    margin: 30px 0; /* Espacement entre les paragraphes */
-}
-
-/* Lien */
+.projet-info {padding-top: 10px;}
+.projet-info p {margin: 30px 0;} /* Espacement entre les paragraphes */
+.projet-info a:hover {text-decoration: underline;}
 .projet-info a {
     color: #007bff;
     text-decoration: none;
 }
-
-.projet-info a:hover {
-    text-decoration: underline;
-}
-
-/* Section générale des projets */
-#projets {
-    margin-top: 30px;
-    padding: 20px;
-}
-
-.projets-page {
-    display: block; /* Par défaut, toutes les pages sont visibles */
-}
-
 
 /* Pagination */
 .pagination {
@@ -297,7 +318,7 @@ ul {
     font-size: 24px;
     cursor: pointer;
     transition: transform 0.3s;
-    z-index: 1000; /* Toujours visible */
+    z-index: 999999; 
 }
 
 #settings-icon:hover {
@@ -361,7 +382,6 @@ nav ul li a:hover {
 }
 
 /* page formation */
-/* Style général de la section */
 #timeline {
     width: 100%;
     padding: 50px 0;
@@ -409,4 +429,92 @@ nav ul li a:hover {
 .timeline-item:hover {
     transform: scale(1.03);
     border-left: 5px solid #28a745;
+}
+
+
+/* Mode LIGHT */
+/* Mode light sur le site en globalitée*/ 
+.light-mode {
+    background-color: #dadada80;
+    color: #000000;
+}
+
+.light-mode h1{
+    color:black;
+}
+
+.light-mode h2{
+    color:rgba(0, 0, 0, 0.774);
+}
+
+.light-mode nav a{
+    color:rgb(0, 0, 0);
+}
+
+.light-mode nav a:hover{
+    color:rgb(255, 255, 255);
+}
+
+.light-mode header, footer {
+    background: linear-gradient(90deg, #15a1ff, #408cff);
+}
+
+.light-mode button{background-color: lightblue;border-radius: 5px;padding : 10px; color : black ; }
+
+/* Mode Light sur les différentes sections (hors projets)*/ 
+.content-box:hover {
+    box-shadow: 0 0 15px rgba(51, 65, 255, 0.6);
+}
+
+.light-mode .content-box {
+    background-color: #ffffff63;
+    border: 2px solid #000000;
+    color: #333;
+}
+
+
+/* Mode light pour formulaire */
+form button {
+    background-color: #8f8f8f;
+    color: rgb(0, 0, 0);
+}
+form label{color : black;}
+form input{border-color: black;}
+form textarea{border-color: #000000;}
+form button:hover {
+    background-color: #5280ff;
+    color: rgb(0, 0, 0);
+}
+
+/* Mode light pour Projets*/ 
+.light-mode .content-box {
+    background-color: #dbdbdb97;
+    border: 2px solid #1900ff;
+    border-radius: 10px;
+}
+
+/* Effet de survol sur les sections */
+.light-mode .content-box:hover {
+    transform: translateY(0); 
+    box-shadow: 0 0 15px rgba(51, 65, 255, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.light-mode .projet{
+    background-color: #dbdbdbbb;
+}
+
+body.light-mode .separateur {
+    color: black !important;
+}
+
+
+.light-mode #theme-toggle {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.light-mode .bodylight{
+    background-color: rgb(138, 0, 23);
 }

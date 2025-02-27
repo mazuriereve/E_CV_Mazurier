@@ -8,29 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <style>
-        .content-box {
-            width: 90%;
-            margin: 50px auto;
-            padding: 40px;
-            background-color: #9797973d;
-            border: 2px solid #1900ff;
-            border-radius: 10px;
-            text-align: center;
-            opacity: 0; 
-            transform: translateY(50px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .content-box.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Effet de survol sur les sections */
         .content-box:hover {
             transform: translateY(0); 
-            border-color: #28a745; 
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
         }
 
         .carousel-container {
@@ -38,7 +17,7 @@
             overflow: hidden;
             white-space: nowrap;
             position: relative;
-            margin-left : 70px;
+            margin-left : 150px;
             border: 2px solid #333;
         }
 
@@ -78,19 +57,15 @@
 
     </style>
 
-
 </head>
 <body>
     <header>
-        <h1>EVE MAZURIER</h1>
-        <h2> Mon E_CV</h2>
-        <h2 class="title">| Développeuse Web |</h2>
-        
-        <div class="description">
-            Passionnée par la création d’interfaces intuitives et performantes, je développe des solutions web modernes et accessibles. 
+        <div class="header">
+            <img src="ton_logo.png" alt="Logo Développeuse Web" class="logo">
+            <h1 class="name">EVE MAZURIER</h1>
+            <h2 class="title">| Développeuse Front-Back-End |</h2>
+            <p> _________________________________________________ </p>
         </div>
-
-        <p> ----------------------------- </p>
         
         <div id="settings-icon">⚙️</div> <!-- Accès aux modifications options -->
         
@@ -111,7 +86,35 @@
         <button id="theme-toggle">🌙 Mode Sombre</button><br>
         <button id="increase-text">🔍 +</button>
         <button id="decrease-text">🔍 -</button><br>
-        <button id="language-toggle">🇬🇧 English</button>
+        <div id="google_translate_element"></div>
+
+        <script>
+        function googleTranslateElementInit() {
+            var savedLang = localStorage.getItem("selectedLang") || "fr"; // Récupère la langue enregistrée ou par défaut FR
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en', // Limite à l'anglais
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+
+            setTimeout(() => {
+                if (savedLang !== "fr") {
+                    googleTranslateChangeLanguage(savedLang);
+                }
+            }, 1000); // Attendre le chargement de Google Translate
+        }
+
+        // Fonction pour changer la langue et la sauvegarder
+        function googleTranslateChangeLanguage(lang) {
+            localStorage.setItem("selectedLang", lang); // Sauvegarde la langue choisie
+            var select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 
     <div id="fireflies"></div>
@@ -128,7 +131,7 @@
             <!-- Séparateur élégant -->
             <div style="display: flex; align-items: center; justify-content: center; margin: 40px 0;">
                 <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
-                <span style="font-size: 30px; color: white;">Projet 1</span>
+                <span class="separateur" style="font-size: 30px; color: white;">Projet 1</span>
                 <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
             </div>
 
@@ -142,21 +145,51 @@
                         <p><strong>Ce que ça m'a apporté :</strong> Ce projet m'a permis de renforcer mes compétences en programmation Java, notamment en matière de gestion de l'interface graphique et des algorithmes de jeu. J'ai également amélioré mes connaissances sur la logique des jeux et l'implémentation des règles complexes telles que le roque et la prise en passant. Enfin, travailler avec une bibliothèque graphique m'a permis de développer une meilleure compréhension de la gestion d'événements et de l'interaction utilisateur.</p>
                         <p><strong>Date :</strong> Mai 2024</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/echec_java" target="_blank">Voir le projet</a></p>
-                        <img class="img_echec" src="imgs/echec.png" alt="Image du jeu d'échecs" />
-                        <p> Ceci n'est pas la photo originale de mon projet , cependant cette image est similaire à mon projet</p>
+                        <div class="carousel-container_echec">
+                            <div class="carousel-track">
+                                <img src="imgs/echec.png" alt="Image 1">
+                                <img src="imgs/echec-2.png" alt="Image 2">
+                            </div>
+                        </div>
+                        <p> Ce ne sont pas les photos originales de mon projet , cependant ces images sont similaires à mon projet</p>
                         <style>
-                            .img_echec{
-                                width: 250px;
-                                height: 250px;
+                            .carousel-container_echec {
+                                width: 1000px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                position: relative;
+                                margin-left : 320px;
                             }
-                        </style>
-                    </div>
+
+                            .carousel-track_echec {
+                                display: flex;
+                                animation: scroll 10s linear infinite;
+                            }
+
+                            .carousel-track_echec img {
+                                width: 400px; /* Taille des images */
+                                height: 250px;
+                                flex-shrink: 0;
+                            }
+
+                            /* Animation pour faire défiler les images */
+                            @keyframes scroll {
+                                from {
+                                    transform: translateX(0);
+                                }
+                                to {
+                                    transform: translateX(-100%);
+                                }
+                            }
+                                </style>
+        
+            </div>
                 </section>
 
                 <!-- Séparateur élégant -->
                 <div style="display: flex; align-items: center; justify-content: center; margin: 40px 0;">
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
-                    <span style="font-size: 30px; color: white;">Projet 2</span>
+                    <span class="separateur" style="font-size: 30px; color: white;">Projet 2</span>
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
                 </div>
 
@@ -170,14 +203,21 @@
                         <p><strong>Ce que ça m'a apporté :</strong> Ce projet m'a permis de développer des compétences solides en création de sites web dynamiques, en intégrant de nouvelles technologies front/back-end. J'ai appris à gérer les bases de données MySQL et à sécuriser les informations sensibles, en mettant en place des mécanismes de chiffrement et de protection contre les attaques SQL. L'utilisation d'une API pour récupérer des données en temps réel m'a aussi permis de me familiariser avec l'intégration de services externes. De plus, ce projet m'a appris à travailler efficacement en équipe, en utilisant des outils collaboratifs comme Trello et Figma pour la gestion de projet et le design. Cette expérience a renforcé ma capacité à développer des applications web sécurisées et performantes.</p>
                         <p><strong>Date :</strong> Novembre 2023</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/sae_r6" target="_blank">Voir le projet</a></p>
-                        <div class="square"></div>
+                        <div class="carousel-container">
+                            <div class="carousel-track">
+                                <img src="imgs/r6_1.png" alt="Image 1">
+                                <img src="imgs/r6_2.png" alt="Image 2">
+                                <img src="imgs/r6_3.png" alt="Image 3">
+                                <img src="imgs/r6_4.png" alt="Image 4">
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Séparateur élégant -->
                 <div style="display: flex; align-items: center; justify-content: center; margin: 40px 0;">
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
-                    <span style="font-size: 30px; color: #bbb;">Projet 3</span>
+                    <span class="separateur" style="font-size: 30px; color: #bbb;">Projet 3</span>
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
                 </div>
 
@@ -210,7 +250,7 @@
 
                 <div style="display: flex; align-items: center; justify-content: center; margin: 40px 0;">
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
-                    <span style="font-size: 30px; color: #bbb;">Projet 4</span>
+                    <span class="separateur" style="font-size: 30px; color: #bbb;">Projet 4</span>
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
                 </div>
 
@@ -225,12 +265,20 @@
                         <p><strong>Date :</strong> Mars 2023 - Mai 2023</p>
                         <p><strong>Lien vers projet Github :</strong> <a href="https://github.com/mazuriereve/loop_quest" target="_blank">Voir le projet</a></p>
                     </div>
+                    <p><strong>Vidéo de démonstration du jeu :</strong> </p>
+                        
+                    <video width="600" controls autoplay muted>
+                        <source src="video/Loop_Quest.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                    
+                    
                 </section>
                 
                 <!-- Séparateur élégant -->
                 <div style="display: flex; align-items: center; justify-content: center; margin: 40px 0;">
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
-                    <span style="font-size: 30px; color: #bbb;">Projet 5</span>
+                    <span class="separateur" style="font-size: 30px; color: #bbb;">Projet 5</span>
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
                 </div>
                 
@@ -242,14 +290,14 @@
                         <p><strong>Technologies :</strong> Unreal Engine</p>
                         <p><strong>Outils :</strong> Visual Studio, Blender (pour la modélisation)</p>
                         <p><strong>Ce que ça m'a apporté :</strong> Ce projet m'a permis d'explorer en profondeur les technologies de réalité virtuelle, en développant un prototype interactif avec Unreal Engine. J'ai appris à concevoir des mécanismes d'interaction immersive, en optimisant les contrôles pour offrir une expérience fluide et naturelle aux utilisateurs. Travailler avec Unreal Engine m'a permis de perfectionner mes compétences en développement de jeux en 3D, en particulier dans la gestion des environnements virtuels et des mouvements naturels avec les contrôleurs VR. L'utilisation de Blender pour la modélisation m'a également donné une expérience précieuse dans la création d'assets 3D. Ce projet m'a permis de comprendre les défis techniques et ergonomiques de la réalité virtuelle et de mettre en œuvre des solutions créatives pour améliorer l'interaction utilisateur dans cet environnement immersif.</p>
-                        <p><strong>Date :</strong> Février 2022</p>
+                        <p><strong>Date :</strong> Février 2025</p>
                         <p><strong>Aucun lien disponible pour visualiser ce projet.</strong></p>
                     </div>
                 </section>
 
                 <div style="display: flex; align-items: center; justify-content: center; margin: 40px 0;">
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
-                    <span style="font-size: 30px; color: #bbb;">Projet 6</span>
+                    <span class="separateur" style="font-size: 30px; color: #bbb;">Projet 6</span>
                     <hr style="flex-grow: 1; border: 0; height: 1px; background: #555; margin: 0 10px;">
                 </div>
                 
@@ -277,7 +325,7 @@
 
                         <p><strong>Vidéo du reportage sur BFM TV :</strong> </p>
                         
-                        <video width="600" controls>
+                        <video width="600" controls autoplay>
                             <source src="video/reportage_bfm-tv.mp4" type="video/mp4">
                             Votre navigateur ne supporte pas la vidéo.
                         </video>

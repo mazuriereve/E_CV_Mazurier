@@ -11,15 +11,12 @@
 </head>
 <body>
     <header>
-        <h1>EVE MAZURIER</h1>
-        <h2> Mon E_CV</h2>
-        <h2 class="title">| Développeuse Web |</h2>
-        
-        <div class="description">
-            Passionnée par la création d’interfaces intuitives et performantes, je développe des solutions web modernes et accessibles. 
+        <div class="header">
+            <img src="ton_logo.png" alt="Logo Développeuse Web" class="logo">
+            <h1 class="name">EVE MAZURIER</h1>
+            <h2 class="title">| Développeuse Front-Back-End |</h2>
+            <p> _________________________________________________ </p>
         </div>
-
-        <p> ----------------------------- </p>
         
         <div id="settings-icon">⚙️</div> <!-- Accès aux modifications options -->
     
@@ -40,11 +37,37 @@
         <button id="theme-toggle">🌙 Mode Sombre</button><br>
         <button id="increase-text">🔍 +</button>
         <button id="decrease-text">🔍 -</button><br>
-        <button id="language-toggle">🇬🇧 English</button>
+        <div id="google_translate_element"></div>
+
+        <script>
+        function googleTranslateElementInit() {
+            var savedLang = localStorage.getItem("selectedLang") || "fr"; // Récupère la langue enregistrée ou par défaut FR
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en', // Limite à l'anglais
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+
+            setTimeout(() => {
+                if (savedLang !== "fr") {
+                    googleTranslateChangeLanguage(savedLang);
+                }
+            }, 1000); // Attendre le chargement de Google Translate
+        }
+
+        // Fonction pour changer la langue et la sauvegarder
+        function googleTranslateChangeLanguage(lang) {
+            localStorage.setItem("selectedLang", lang); // Sauvegarde la langue choisie
+            var select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
     
-    
-
     <div id="fireflies"></div>
 
     <!DOCTYPE html>
@@ -55,9 +78,6 @@
     <title>Formulaire de Contact</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Styles de base */
-
-
         .contact-form-container {
             background-color: #fff;
             padding: 30px;
@@ -70,6 +90,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
+            color : black ; 
         }
 
         label {
@@ -85,10 +106,10 @@
             border-radius: 4px;
         }
 
-        button {
-            width: 100%;
+        form button {
+            width: 82%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #283aff;
             color: white;
             border: none;
             border-radius: 4px;
@@ -99,6 +120,7 @@
             background-color: #45a049;
         }
 
+       
     </style>
 </head>
 <body>
