@@ -570,3 +570,229 @@ body.light-mode .separateur {
 .light-mode .bodylight{
     background-color: rgb(138, 0, 23);
 }
+
+
+
+/* Format responsivee */
+
+/* Media Queries pour les écrans de téléphone */
+@media (max-width: 768px) {
+
+    /* Réduction de la taille de la police pour le corps de texte */
+    body {
+        font-size: 14px;  /* Diminue la taille de la police sur les petits écrans */
+    }
+
+    /* Taille du texte dans l'entête */
+    .name {
+        font-size: 2.5rem;  /* Réduit la taille du nom */
+    }
+
+    .subtitle {
+        font-size: 1.2rem;  /* Réduit la taille du sous-titre */
+    }
+
+    .title {
+        font-size: 1.5rem;  /* Réduit la taille du titre */
+    }
+
+    /* Redimensionnement du bouton télécharger le CV */
+    .download-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Réduction des espacements du header */
+    header {
+        padding: 15px;
+    }
+
+    /* Navbar (menu de navigation) */
+    nav ul {
+        flex-direction: column; /* Passe les liens en colonne */
+        gap: 20px; /* Espace entre les liens */
+    }
+
+    nav ul li a {
+        font-size: 22px; /* Réduit la taille des liens */
+        padding: 8px 15px;  /* Ajuste les marges */
+    }
+
+    /* Changement pour la section content-box (pour qu'elle occupe plus de place sur mobile) */
+    .content-box {
+        width: 90%;  /* Augmente la largeur de la boîte pour qu'elle prenne plus de place */
+        margin: 20px auto;
+        padding: 30px;
+    }
+
+    /* Ajustements pour les sections de formation */
+    .timeline {
+        flex-direction: column;  /* Passe la timeline en colonne sur mobile */
+    }
+
+    .timeline-item {
+        width: 90%;  /* Réduit la largeur des items */
+    }
+
+    /* Ajustements pour le footer */
+    footer ul {
+        padding-left: 20px; /* Ajuste le padding */
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 20px;
+    }
+
+    /* Ajustement du bouton de changement de thème */
+    #theme-toggle {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-top: 10px;
+    }
+
+    /* Ajustement de l'icon du menu de paramètres */
+    #settings-icon {
+        top: 15px;
+        right: 10px;
+        font-size: 20px;
+    }
+
+    /* Barre latérale */
+    #sidebar {
+        width: 80%; /* Réduit la largeur de la barre latérale sur mobile */
+    }
+
+    /* Ajustement pour la pagination */
+    .pagination button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    /* Style des boutons dans la barre latérale */
+    #sidebar .bouton {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Ajustement de l'icône de fermeture de la sidebar */
+    #close-sidebar {
+        font-size: 18px;
+        top: 15px;
+        right: 15px;
+    }
+
+    /* Ajustement de la page projets */
+    #projets {
+        padding: 10px;
+    }
+
+    /* Ajustement de l'élément projet */
+    .projet {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    /* Ajustement des éléments dans chaque projet */
+    .projet-info p {
+        margin: 20px 0;  /* Réduit l'écart entre les paragraphes */
+    }
+
+    /* Formulaire */
+    form input, form textarea, form button {
+        width: 100%; /* Prend toute la largeur de l'écran */
+        margin: 10px 0;
+    }
+
+    /* Ajustement pour les lucioles */
+    #fireflies .firefly {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* Cacher certaines sections quand la sidebar est visible */
+    .sidebar-active {
+        display: block !important;
+        opacity: 1 !important;
+    }
+
+    /* Ajustement des boutons d'accessibilité */
+    #text-size-controls button, #language-toggle {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin: 5px;
+    }
+}
+
+/* Media Queries pour les très petits écrans (téléphones mobiles) */
+@media (max-width: 480px) {
+    /* Réduction de la taille de la police encore plus pour les très petits écrans */
+    body {
+        font-size: 12px;
+    }
+
+    .name {
+        font-size: 2rem;  /* Encore plus petit pour les petits écrans */
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    /* Réduction des marges et du padding dans les éléments */
+    .download-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Ajustement de la navbar */
+    nav ul {
+        flex-direction: column; /* Assure que les éléments de la navbar sont bien en colonne */
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    /* Changer l'alignement des items dans le footer */
+    footer ul {
+        text-align: center;
+    }
+
+    /* Ajustement de la pagination */
+    .pagination button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Réduire la taille des éléments dans les projets */
+    .projet {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    /* Réduction de la taille des boutons d'accès rapide */
+    #theme-toggle {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    /* Cacher ou ajuster les éléments non essentiels */
+    #settings-icon {
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Réduction de la taille des lucioles */
+    #fireflies .firefly {
+        width: 5px;
+        height: 5px;
+    }
+}
