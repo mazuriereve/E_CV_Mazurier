@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon e-CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <script defer src="script.js"></script>
+    <script>
+        document.getElementById("close-sidebar").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.remove("open");
+        });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("sidebar").classList.add("open");
+            }, 500); // Ouvre la sidebar après 0.5s
+        });
+        </script>
+</head>
+<body>
+        <header>
+        <div class="header">
+            <h1 class="name">EVE MAZURIER</h1>
+            <h2 class="title">| Développeuse Front-Back-End |</h2>
+            <p> _________________________________________________ </p>
+        </div>
+                
+        <div id="settings-icon">⚙️</div> <!-- Accès aux modifications options -->
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">A propos de moi</a></li>
+                <li><a href="competences.html">Mes compétences</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html">Me contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    
+    <!-- Barre latérale -->
+    <div id="sidebar">
+        <button id="close-sidebar">✖</button>
+        <h2>Options</h2>
+        <p> Passer en mode sombre/clair</p>
+        <button class="bouton" id="theme-toggle">🌙 Mode Sombre</button><br>
+
+        <p> Agrandir le texte </p>
+        <button class="bouton" id="increase-text">🔍 +</button>
+        <p> Rétrecir le texte</p>
+        <button class="bouton" id="decrease-text">🔍 -</button><br>
+
+        <p> Changer la langue</p>
+        <div id="google_translate_element"></div>
+
+        <script>
+        function googleTranslateElementInit() {
+            var savedLang = localStorage.getItem("selectedLang") || "fr"; // Récupère la langue enregistrée ou par défaut FR
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en', // Limite à l'anglais
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+
+            setTimeout(() => {
+                if (savedLang !== "fr") {
+                    googleTranslateChangeLanguage(savedLang);
+                }
+            }, 1000); // Attendre le chargement de Google Translate
+        }
+
+        // Fonction pour changer la langue et la sauvegarder
+        function googleTranslateChangeLanguage(lang) {
+            localStorage.setItem("selectedLang", lang); // Sauvegarde la langue choisie
+            var select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+        </script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    </div>    
+
+    <div id="fireflies"></div>
+
+    <br><br><h1 style="text-align: center;">📜 Mes Compétences 📜</h1>
+
+
+
+        <section id="accueil" class="content-box">
+            <h2> 💻 Langages et Technologies</h2>
+            <ul>
+                <li><strong>HTML</strong> & <strong>CSS</strong> : Pour la structure et la mise en forme des pages web.</li>
+                <li><strong>JavaScript</strong> & <strong>jQuery</strong> : Pour rendre les sites interactifs et réactifs.</li>
+                <li><strong>PHP</strong> & <strong>MySQL</strong> : Pour développer des applications web dynamiques et gérer les bases de données.</li>
+                <li><strong>React</strong> & <strong>Node.js</strong> : Pour créer des applications web modernes, rapides et scalables.</li>
+                <li><strong>Java</strong> : Langage de programmation polyvalent utilisé pour le développement d'applications web, mobiles et logicielles.</li>
+                <li><strong>C</strong> & <strong>C++</strong> : Langage de programmation de bas niveau, essentiel pour la création de logiciels performants et systèmes embarqués.</li>
+                <li><strong>Python</strong> : Langage de programmation populaire pour le développement web, l'analyse de données, l'automatisation et l'intelligence artificielle.</li>
+
+            </ul>
+            <div class="logos-container">
+                <img src="imgs/html.png" alt="HTML" class="logo">
+                <img src="imgs/css.png" alt="CSS" class="logo">
+                <img src="imgs/js.jpg" alt="JavaScript" class="logo">
+                <img src="imgs/jquery.png" alt="jQuery" class="logo">
+                <img src="imgs/php.png" alt="PHP" class="logo">
+                <img src="imgs/mysql.jpg" alt="PHP" class="logo">
+                <img src="imgs/react.jpg" alt="PHP" class="logo">
+                <img src="imgs/nodejs.jpg" alt="PHP" class="logo">
+                <img src="imgs/java.jpg" alt="java" class="logo">
+                <img src="imgs/c++.jpg" alt="c++" class="logo">
+                <img src="imgs/python.jpg" alt="PHP" class="logo">
+            </div>
+        </section>
+    
+    </div>
+
+    <style>
+    .logos-container {
+        display: flex;
+        animation: scroll 10s linear infinite;
+    }
+
+    .logo {
+        width: 150px;
+        margin-right: 30px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    </style>
+    
+    <div class="content-box-2">
+        <section id="accueil" class="content-box">
+            <h2>🔧 Outils</h2>
+            <p>Pour mes projets de développement web, j'utilise une variété d'outils et de technologies qui me permettent de créer des applications modernes, réactives et performantes. Voici un aperçu des outils que j'utilise régulièrement :</p>
+            
+            <ul>
+                <li><strong>Git</strong> & <strong>GitHub</strong> : Gestion des versions et collaboration sur des projets.</li>
+                <li><strong>Visual Studio Code</strong> : Mon éditeur de code quotidien avec de nombreuses extensions.</li>
+                <li><strong>MongoDB</strong> : Gestion des bases de données pour stocker les informations des utilisateurs.</li>
+                <li><strong>Postman</strong> : Pour tester les API de mes applications.</li>
+                <li><strong>Pack Office</strong> : Pour rédiger tout mes documents de manière professionnelle et organisé </li>
+                <li><strong>Trello</strong> : Pour organiser mes tâches et projets de manière visuelle et collaborative.</li>
+                <li><strong>Docker</strong> : Pour la conteneurisation des applications, garantissant un déploiement cohérent et rapide sur différents environnements.</li>
+                <li><strong>Figma</strong> : Pour la création de designs d'interface utilisateur et de prototypes interactifs de manière collaborative.</li>
+
+
+            </ul>
+            <div class="logos-container">
+                <img src="imgs/git.jpg" alt="Git" class="logo">
+                <img src="imgs/github.jpg" alt="VSC" class="logo">
+                <img src="imgs/mongo.jpg" alt="MongoDB" class="logo">
+                <img src="imgs/postman.jpg" alt="Postman" class="logo">
+                <img src="imgs/office.jpg" alt="pack office" class="logo">
+                <img src="imgs/trello.jpg" alt="pack office" class="logo">
+                <img src="imgs/docker.jpg" alt="pack office" class="logo">
+                <img src="imgs/figma.jpg" alt="pack office" class="logo">
+            </div>
+        </section>
+    </div>
+
+   
+
+    <section id="accueil" class="content-box">
+        <h2> 🎯 Mes autres compétences</h2>
+        <p>Lors de ma formation j'ai eu l'occasion d'apprendre plusieurs autre choses qui contribue essentiellement à ma vie professionnelle :</p>
+
+        <ul>
+            <li><strong>Travail en équipe</strong>: J'ai appris à collaborer efficacement au sein d'une équipe, à partager des idées et à résoudre ensemble des défis techniques. La communication et la répartition des tâches sont essentielles pour le bon déroulement des projets.</li>
+            <br><li><strong>Travail avec la méthode Agile Scrum</strong>: Grâce à cette méthode, j'ai appris à être plus réactif et adaptable face aux changements, tout en maintenant une structure rigoureuse. Travailler en sprints m'a permis de livrer des résultats rapidement et de manière continue.</li>
+        </ul>
+    </section>
+
+    
+    <style>
+        
+    </style>
+
+    </section>
+
+    
+
+    <footer>
+        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>      
+        <p>Retrouvez-moi sur :</p>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mazuriereve/" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </li>
+        </ul>        
+        <p>&copy; 2025 Eve Mazurier - Tous droits réservés</p>
+        <button class="bouton_footer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Retour en haut</button>
+    </footer>
+    
+</body>
+</html>

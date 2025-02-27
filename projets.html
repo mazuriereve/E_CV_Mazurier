@@ -6,7 +6,20 @@
     <title>Mes Projets</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <script defer src="script.js"></script>
+    <script>
+        document.getElementById("close-sidebar").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.remove("open");
+        });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("sidebar").classList.add("open");
+            }, 500); // Ouvre la sidebar après 0.5s
+        });
+        </script>
     <style>
         .content-box:hover {
             transform: translateY(0); 
@@ -61,7 +74,6 @@
 <body>
     <header>
         <div class="header">
-            <img src="ton_logo.png" alt="Logo Développeuse Web" class="logo">
             <h1 class="name">EVE MAZURIER</h1>
             <h2 class="title">| Développeuse Front-Back-End |</h2>
             <p> _________________________________________________ </p>
@@ -71,7 +83,8 @@
         
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">A propos de moi</a></li>
+                <li><a href="competences.html">Mes compétences</a></li>
                 <li><a href="projets.html">Mes Projets</a></li>
                 <li><a href="formation.html">Formation</a></li>
                 <li><a href="contact.html">Me contacter</a></li>
@@ -83,9 +96,15 @@
     <div id="sidebar">
         <button id="close-sidebar">✖</button>
         <h2>Options</h2>
-        <button id="theme-toggle">🌙 Mode Sombre</button><br>
-        <button id="increase-text">🔍 +</button>
-        <button id="decrease-text">🔍 -</button><br>
+        <p> Passer en mode sombre/clair</p>
+        <button class="bouton" id="theme-toggle">🌙 Mode Sombre</button><br>
+
+        <p> Agrandir le texte </p>
+        <button class="bouton" id="increase-text">🔍 +</button>
+        <p> Rétrecir le texte</p>
+        <button class="bouton" id="decrease-text">🔍 -</button><br>
+
+        <p> Changer la langue</p>
         <div id="google_translate_element"></div>
 
         <script>
@@ -357,12 +376,19 @@
 
 
     <footer>
-        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>
-        
+        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>      
         <p>Retrouvez-moi sur :</p>
         <ul>
-            <li><a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/mazuriereve/" target="_blank">GitHub</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mazuriereve/" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </li>
         </ul>        
         <p>&copy; 2025 Eve Mazurier - Tous droits réservés</p>
         <button class="bouton_footer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Retour en haut</button>

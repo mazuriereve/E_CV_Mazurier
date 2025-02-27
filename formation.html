@@ -6,7 +6,21 @@
     <title>Me Contacter</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <script defer src="script.js"></script>
+    <script>
+        document.getElementById("close-sidebar").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.remove("open");
+        });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("sidebar").classList.add("open");
+            }, 500); // Ouvre la sidebar après 0.5s
+        });
+        </script>
+
     <style>
         /* Conteneur de la vidéo */
         .video-wrapper {
@@ -37,7 +51,6 @@
 
     <header>
         <div class="header">
-            <img src="ton_logo.png" alt="Logo Développeuse Web" class="logo">
             <h1 class="name">EVE MAZURIER</h1>
             <h2 class="title">| Développeuse Front-Back-End |</h2>
             <p> _________________________________________________ </p>
@@ -49,6 +62,7 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="competences.html">Mes compétences</a></li>
                 <li><a href="formation.html">Formation</a></li>
                 <li><a href="contact.html">Me contacter</a></li>
             </ul>
@@ -59,9 +73,15 @@
     <div id="sidebar">
         <button id="close-sidebar">✖</button>
         <h2>Options</h2>
-        <button id="theme-toggle">🌙 Mode Sombre</button><br>
-        <button id="increase-text">🔍 +</button>
-        <button id="decrease-text">🔍 -</button><br>
+        <p> Passer en mode sombre/clair</p>
+        <button class="bouton" id="theme-toggle">🌙 Mode Sombre</button><br>
+
+        <p> Agrandir le texte </p>
+        <button class="bouton" id="increase-text">🔍 +</button>
+        <p> Rétrecir le texte</p>
+        <button class="bouton" id="decrease-text">🔍 -</button><br>
+
+        <p> Changer la langue</p>
         <div id="google_translate_element"></div>
 
         <script>
@@ -99,13 +119,13 @@
 
         <section id="timeline">
             <div class="timeline">
-            <h2>📜 Mon Parcours de Formation</h2>
+            <h1>📜 Mon Parcours de Formation 📜</h1>
                 
                 <div class="timeline-item">
                     
                     <div class="timeline-content">
                         <h3 style="color: lightblue">BUT Informatique | 2022 - 2025 </h3>
-                        <p>Obtention de mon BUT en informatique, en Parcours A avec une spécialisation en développement web et applications.</p>
+                        <p><u> Obtention de mon BUT en informatique, en Parcours A avec une spécialisation en développement web et applications.</u></p>
                         <p>
                             Cette formation m'a permis d'acquérir des compétences techniques solides, notamment en HTML, CSS, JavaScript, ainsi qu'en back-end avec des technologies comme Node.js et React. J'ai également appris à utiliser des bases de données comme MySQL et MongoDB, et à travailler avec des outils de gestion de version tels que Git.
                             Grâce à cette spécialisation, j'ai pu développer des compétences pratiques en créant des applications web, tout en améliorant mes capacités de travail en équipe et de gestion de projets avec des méthodologies comme Agile Scrum. Cette formation m’a préparé à relever les défis du développement web dans un environnement professionnel.
@@ -113,9 +133,33 @@
                     </div>
                     <div class="image">
                         <img src="imgs/iut calais.jpg" alt="IUT Calais">
-                    </div>
+                        <div class="map">
+
+                        </div>
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10054.116787679623!2d1.8652873613472967!3d50.95091936430325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dc4086a1904405%3A0x7e0ccba33a6e4940!2sIUT%20du%20Littoral%20C%C3%B4te%20d&#39;Opale!5e0!3m2!1sfr!2sfr!4v1740685098189!5m2!1sfr!2sfr" width="400" height="250" style="border:1px ;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+
+                    <style>
+                        .image {
+                            display: flex;
+                            justify-content: center; 
+                            align-items: center; 
+                            gap: 20px; 
+                        }
+
+                        .image img {
+                            max-width: 30%; 
+                            height: auto;
+                        }
+
+                        .map iframe {
+                            max-width: 40%; 
+                            height: 300px;
+                        }
+
+                    </style>
                     
-                    <p> <u> Retrouvez ci-dessous mon récapitulatif sur mes années dans cette formation. </u></p>
+                    <br> <p> <u> Retrouvez ci-dessous mon récapitulatif sur mes années dans cette formation. </u></p>
                     <div class="video-wrapper">
                         <div class="video-container">
                             <iframe 
@@ -133,7 +177,7 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3 style="color : lightblue" >Bac Général | 2022 </h3>
-                        <p>Acquisition du Baccalauréat Général avec spécialités : Numérique et Sciences de l'Informatique et Mathématiques.</p>
+                        <p><u> Acquisition du Baccalauréat Général avec spécialités : </u> Numérique et Sciences de l'Informatique et Mathématiques.</p>
                         <p>Cette formation m'a permis d'acquérir une bonne base en sciences de l'informatique, notamment en algorithmique, en développement informatique et en analyse de données. Elle m'a également donné des compétences solides en mathématiques, essentielles pour aborder des concepts complexes en informatique, comme la logique, les structures de données et les systèmes. Cette formation a été une étape cruciale dans mon parcours vers des études en informatique.</p>
                     </div>
                     <div class="image">
@@ -150,12 +194,19 @@
     
 
     <footer>
-        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>
-        
+        <p>📧 Contactez-moi : <a href="contact.html">Ici</a></p>      
         <p>Retrouvez-moi sur :</p>
         <ul>
-            <li><a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/mazuriereve/" target="_blank">GitHub</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/eve-mazurier/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mazuriereve/" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </li>
         </ul>        
         <p>&copy; 2025 Eve Mazurier - Tous droits réservés</p>
         <button class="bouton_footer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Retour en haut</button>
