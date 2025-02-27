@@ -1,3 +1,4 @@
+// Première fonction en js pour faire un effet de "lucioles sur l'écran"
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".content-box");
 
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Deuxième mode : pour faire un mode sombre et un mode clair
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".content-box");
     const themeToggle = document.getElementById("theme-toggle");
@@ -172,4 +174,23 @@ document.addEventListener("DOMContentLoaded", function () {
             closeSidebarMenu();
         }
     });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = document.querySelectorAll(".project");
+
+    function checkScroll() {
+        projects.forEach((project) => {
+            const position = project.getBoundingClientRect().top;
+            if (position < window.innerHeight - 100) {
+                project.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    checkScroll();
 });
